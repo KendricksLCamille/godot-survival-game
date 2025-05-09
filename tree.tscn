@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bamo2l7ki6nlf"]
+
+[ext_resource type="ArrayMesh" uid="uid://dgvi7aneh8aa2" path="res://Models/treePine.obj" id="1_ey852"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_q847v"]
+height = 0.707066
+radius = 0.146468
+
+[node name="Tree" type="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.54257, 0, 0)
+
+[node name="Model" type="MeshInstance3D" parent="."]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0.981, 0)
+mesh = ExtResource("1_ey852")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 2.7831, 0)
+shape = SubResource("CylinderShape3D_q847v")

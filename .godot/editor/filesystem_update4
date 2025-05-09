@@ -1,0 +1,4 @@
+res://GameScene.tscn
+res://NeedBar.gd
+res://Health.gd
+res://PlayerNeed.gd
